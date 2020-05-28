@@ -1,0 +1,35 @@
+<h3>{{viewTitle}}</h3>
+
+<form action = "/article" method = "POST" autocomplete="off">
+    <div class = "form-group">
+        <label>Title</label>
+        <input type="text" class = "form-control" name = "title" placeholder="Title" value="{{article.title}}">
+    </div>
+    <div class = "form-group">
+        <label>Description</label>
+        <input type="text" class = "form-control" name = "description" placeholder="Description" value="{{article.description}}">
+    </div>
+    <div class = "form-group">
+        <label>Year</label>
+        <input type="text" class = "form-control" name = "year" placeholder="Year" value="{{article.year}}">
+    </div>
+    <div class = "form-group">
+        <button type="submit" class = "btn btn-info"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</form>
+<form action = "/article/listsearch" method = "GET">
+    <div class = "form-group">
+        <label for="typeSearch">Search different field</label>
+        <select name="type" id="type">
+            <option>title</option>
+            <option>description</option>
+            <option>year</option>
+        </select>
+    <div class = "form-group">
+        <label>Search</label>
+        <input type="text" class = "form-control" name = "search" placeholder="Article Search">
+    </div>
+    <div class = "form-group">
+        <button type="submit" class = "btn btn-info" value="Search" value="type"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</form>
