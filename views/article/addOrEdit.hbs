@@ -19,6 +19,61 @@
 </form>
 <form action = "/article/listsearch" method = "GET">
     <div class = "form-group">
+        <label for="sort">Sort by different field</label>
+        <select name="sort" id="sort" >
+            <option>none</option>
+            <option>title</option>
+            <option>description</option>
+            <option>title descending</option>
+            <option>description descending</option>
+            <option>year</option>
+            <option>year descending</option>
+            
+        </select>
+    </div>    
+        <div class = "form-group">
+        <label for="sort">Select the fields to be hidden</label>
+        <select name="hide" id="hide" >
+             <option>none</option>
+            <option>title</option>
+            <option>description</option>
+            <option>title and description</option>
+            <option>description and year</option>
+            <option>title and year</option>
+            <option>year</option>
+        </select>
+    </div>
+    <div class = "form-group">
+        <label>Search</label><br>
+        <label>Title</label>
+        <input type="text" class = "form-control" name = "searchTitle" placeholder="Article Search">
+    </div>
+    <div class = "form-group">
+        <label>Description</label>
+        <input type="text" class = "form-control" name = "searchDescription" placeholder="Article Search">
+    </div>
+    <div class = "form-group">
+        <label>Year high</label>
+        <input type="text" class = "form-control" name = "searchYearHigh" placeholder="Article Search">
+    </div>
+    <div class = "form-group">
+        <label>Year low</label>
+        <input type="text" class = "form-control" name = "searchYearLow" placeholder="Article Search">
+    </div>
+  
+    <div class = "form-group">
+        <button type="submit" class = "btn btn-info" value="Search" value="type"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</form>
+
+
+{{!-- <form action = "/article/listsearch" method = "GET"><br/>
+<input type="radio" name="rdForm" value="form1" checked="checked">Search by Title
+<input type="radio" name="rdForm" value="form2">Search by Title and Description
+
+
+<div id="form2">
+    <div class = "form-group">
         <label for="typeSearch">Search different field</label>
         <select name="type" id="type">
             <option>title</option>
@@ -26,10 +81,24 @@
             <option>year</option>
         </select>
     <div class = "form-group">
-        <label>Search</label>
-        <input type="text" class = "form-control" name = "search" placeholder="Article Search">
+        <label>title</label>
+        <input type="text" class = "form-control" name = "searchTitle" placeholder="Article Search">
+        <label>description</label>
+        <input type="text" class = "form-control" name = "searchDescription" placeholder="Article Search">
     </div>
     <div class = "form-group">
-        <button type="submit" class = "btn btn-info" value="Search" value="type"><i class="fa fa-database"></i>Submit</button>
+        <button type="submit" class = "btn btn-info" value="searchTitle" value="searchDescription"><i class="fa fa-database"></i>Submit</button>
     </div>
-</form>
+</div>
+<br/>
+
+<div id="form1" style="display:none;">
+    <div class = "form-group">
+        <label>title</label>
+        <input type="text" class = "form-control" name = "searchTitle" placeholder="Article Search">
+    </div>
+    <div class = "form-group">
+        <button type="submit" class = "btn btn-info" value="searchTitle" value="searchDescription"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</div>
+</form> --}}
