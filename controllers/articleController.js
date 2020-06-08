@@ -246,5 +246,5 @@ router.get('/list', (req, res) => {
             return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
         };
     
-
+        module.exports = escapeRegex;
 module.exports = router;
